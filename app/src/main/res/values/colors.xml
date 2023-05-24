@@ -10,5 +10,6 @@
     <color name="light_green_background">#EDF1D6</color>
     <color name="header_green">#D9E9D1</color>
     <color name="font_color1">#5F8D4E</color>
+    <color name="font_color2">#9DC08B</color>
     <color name="stroke">#285430</color>
 </resources>
