@@ -16,5 +16,9 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/_781828_direction_gps_location_map_maps_icon"
             android:title="@string/maps" />
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/logo"
+            android:title="@string/about_us"/>
     </group>
 </menu>
