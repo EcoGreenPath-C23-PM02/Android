@@ -31,7 +31,7 @@ class CustomEmail : TextInputEditText {
                 val input = s.toString()
                 when {
                     input.isBlank() -> error = "Please Fill This Field"
-                    !input.isEmailValid()-> error = "Email is Invalid"
+                    !input.isEmailValid()-> error = "Invalid Email"
                 }
             }
             override fun afterTextChanged(p0: Editable?) {
