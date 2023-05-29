@@ -15,6 +15,6 @@
         android:strokeLineCap="round"/>
     <path
         android:pathData="M-22.08,46.08l159.95,-21.84l21.84,159.95l-159.95,21.84z"
-        android:fillColor="url(#pattern0)"/>
+        />
   </group>
 </vector>
