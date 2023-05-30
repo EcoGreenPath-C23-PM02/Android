@@ -29,5 +29,20 @@ class AppRepository (
         }
     }
 
+    fun register(
+        name: String,
+        email: String,
+        password: String
+    ): LiveData<Result<GeneralResponse>> = liveData {
+        emit(Result.Loading)
+        try {
+            val data = apiService.register(name, email, password)
+            emit(Result.Success(data))
+        } catch (e: Exception) {
+            Log.d("Register", e.message.toString())
+            emit(Result.Error(e.message.toString()))
+        }
+    }
+
 
 }

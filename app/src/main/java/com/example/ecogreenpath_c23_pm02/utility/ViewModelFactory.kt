@@ -7,6 +7,7 @@ import com.example.ecogreenpath_c23_pm02.data.response.AppRepository
 import com.example.ecogreenpath_c23_pm02.data.response.Injection
 import com.example.ecogreenpath_c23_pm02.ui.login.LoginViewModel
 import com.example.ecogreenpath_c23_pm02.ui.maps.MapsViewModel
+import com.example.ecogreenpath_c23_pm02.ui.signup.RegisterViewModel
 
 class ViewModelFactory private constructor(
     private val repository: AppRepository
@@ -25,6 +26,9 @@ class ViewModelFactory private constructor(
         return when {
             modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
                 LoginViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(RegisterViewModel::class.java) -> {
+                RegisterViewModel(repository) as T
             }
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
         }

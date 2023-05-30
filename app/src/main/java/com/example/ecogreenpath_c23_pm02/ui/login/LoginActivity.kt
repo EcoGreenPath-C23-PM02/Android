@@ -15,6 +15,7 @@ import com.example.ecogreenpath_c23_pm02.R
 import com.example.ecogreenpath_c23_pm02.data.pref.PreferenceDataSource
 import com.example.ecogreenpath_c23_pm02.data.response.Result
 import com.example.ecogreenpath_c23_pm02.databinding.ActivityLoginBinding
+import com.example.ecogreenpath_c23_pm02.ui.signup.RegisterActivity
 import com.example.ecogreenpath_c23_pm02.utility.ViewModelFactory
 import com.example.ecogreenpath_c23_pm02.utility.gone
 import com.example.ecogreenpath_c23_pm02.utility.show
@@ -75,6 +76,10 @@ class LoginActivity : AppCompatActivity() {
 
                     }
                 }
+            }
+            register.setOnClickListener {
+                val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+                startActivity(intent)
             }
         }
 
