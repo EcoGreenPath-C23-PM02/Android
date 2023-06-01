@@ -13,6 +13,8 @@
     <color name="font_color1">#5F8D4E</color>
     <color name="font_color2">#9DC08B</color>
     <color name="font_color3">#285430</color>
+    <color name="font_color4">#CBFFA3</color>
+    <color name="font_color5">#F4FFEB</color>
     <color name="stroke">#285430</color>
     <color name="drawer_color">#9DC08B</color>
 </resources>
