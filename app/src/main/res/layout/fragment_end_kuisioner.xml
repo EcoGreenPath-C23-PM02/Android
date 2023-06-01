@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    android:background="@color/gainsboro"
+    tools:context=".ui.kuisioner.EndKuisionerFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/custom_bg_kuisioner">
+
+        <ImageView
+            android:id="@+id/imv_end_kuisioner"
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+         android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/nav_header_height"
+            android:src="@drawable/icon_end_kusioner" />
+
+        <TextView
+            android:id="@+id/tv_end_kuisioner"
+            android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imv_end_kuisioner"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/font_color3"
+            android:textSize="@dimen/text_size_medium"
+            android:text="@string/onboarding_text"/>
+        
+        <Button
+            android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:text="@string/let_s_go"
+            android:fontFamily="@font/nunito_bold"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/font_color1"
+            android:layout_below="@id/tv_end_kuisioner"
+            android:textSize="@dimen/text_size_medium"
+            />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

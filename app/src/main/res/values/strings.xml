@@ -36,4 +36,7 @@
     <string name="logout">Logout</string>
     <string name="loginHere">Already Have an Account? Login Here</string>
     <string name="birth_date">Birth Date</string>
+    <string name="onboarding_text">Before start\nlets answer this few question</string>
+    <string name="end_kuisioner">All Set\nLet\'s Go to the\nHomepage</string>
+    <string name="let_s_go">Let\'s Go</string>
 </resources>
