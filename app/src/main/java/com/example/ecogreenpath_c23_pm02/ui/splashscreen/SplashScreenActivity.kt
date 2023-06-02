@@ -12,9 +12,11 @@ import android.view.View
 import com.example.ecogreenpath_c23_pm02.ui.MainActivity
 import com.example.ecogreenpath_c23_pm02.data.pref.PreferenceDataSource
 import com.example.ecogreenpath_c23_pm02.databinding.ActivitySplashSceenBinding
+import com.example.ecogreenpath_c23_pm02.ui.kuisioner.KuisionerActivity
 import com.example.ecogreenpath_c23_pm02.ui.login.LoginActivity
 
 
+@Suppress("DEPRECATION")
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -27,15 +29,16 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashSceenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         hideSystemUI()
         playAnimation()
         val token = pref.fetchAuthToken()
         Handler(Looper.getMainLooper()).postDelayed({
             if (token.isNullOrEmpty()) {
-                startActivity(Intent(this@SplashScreenActivity, LoginActivity::class.java))
+                startActivity(Intent(this@SplashScreenActivity, KuisionerActivity::class.java))
                 finish()
             } else {
-                startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
+                startActivity(Intent(this@SplashScreenActivity, KuisionerActivity::class.java))
                 finish()
             }
             finish()

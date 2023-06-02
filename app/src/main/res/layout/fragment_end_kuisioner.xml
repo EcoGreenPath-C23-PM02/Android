@@ -30,22 +30,26 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:fontFamily="@font/nunito_bold"
-            android:textColor="@color/font_color3"
+            android:textColor="@color/on_primary_color"
             android:textSize="@dimen/text_size_medium"
             android:text="@string/onboarding_text"/>
-        
+
         <Button
-            android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+            android:id="@+id/btn_lets_go"
             android:layout_width="207dp"
-            android:layout_height="wrap_content"
-            android:text="@string/let_s_go"
-            android:fontFamily="@font/nunito_bold"
-            android:textAllCaps="false"
-            android:layout_centerHorizontal="true"
-            android:backgroundTint="@color/font_color1"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
             android:layout_below="@id/tv_end_kuisioner"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/primary_variant_color"
+            android:backgroundTint="@color/on_primary_color"
+            android:text="@string/let_s_go"
             android:textSize="@dimen/text_size_medium"
+            android:backgroundTintMode="src_atop"
+            android:fontFamily="@font/nunito_black"
+            android:textAllCaps="false"
             />
+
 
 
 

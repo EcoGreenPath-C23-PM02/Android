@@ -24,7 +24,24 @@
         <item name="android:textColorPrimary">@color/font_color1</item>
     </style>
 
+    <style name="Button.Custom" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:background">@color/on_primary_color</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+
+    <style name="Button.arrow" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:background">@color/on_primary_color</item>
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+
     <style name="Theme.EcoGreenPath_C23PM02.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="Theme.EcoGreenPath_C23PM02.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+
 </resources>

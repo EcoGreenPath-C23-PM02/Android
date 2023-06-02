@@ -40,4 +40,7 @@
     <string name="end_kuisioner">All Set\nLet\'s Go to the\nHomepage</string>
     <string name="let_s_go">Let\'s Go</string>
     <string name="profile">Profile</string>
+    <string name="title_activity_choice">choice</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

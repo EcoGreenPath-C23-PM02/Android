@@ -9,6 +9,7 @@
     android:background="@color/gainsboro"
     tools:context=".ui.kuisioner.OnboardingKuisionerFragment">
     <RelativeLayout
+        android:padding="8dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/custom_bg_kuisioner"
@@ -21,6 +22,7 @@
             android:layout_centerInParent="true"
             android:src="@drawable/icon_onboarding" />
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,7 +30,7 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:fontFamily="@font/nunito_bold"
-            android:textColor="@color/font_color3"
+            android:textColor="@color/on_primary_color"
             android:textSize="@dimen/text_size_medium"
             android:text="@string/onboarding_text"/>
 
