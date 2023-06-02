@@ -9,7 +9,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
-import com.example.ecogreenpath_c23_pm02.MainActivity
+import com.example.ecogreenpath_c23_pm02.ui.MainActivity
 import com.example.ecogreenpath_c23_pm02.data.pref.PreferenceDataSource
 import com.example.ecogreenpath_c23_pm02.databinding.ActivitySplashSceenBinding
 import com.example.ecogreenpath_c23_pm02.ui.login.LoginActivity

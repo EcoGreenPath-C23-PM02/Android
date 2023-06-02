@@ -17,4 +17,11 @@
     <color name="font_color5">#F4FFEB</color>
     <color name="stroke">#285430</color>
     <color name="drawer_color">#9DC08B</color>
+    <color name="primary_color">#5F8D4E</color>
+    <color name="primary_variant_color">#285430</color>
+    <color name="secondary_color">#9DC08B</color>
+    <color name="secondary_on_color">#D9E9D1</color>
+    <color name="on_primary_color">#EDF1D6</color>
+    <color name="netral1">#1B1B25</color>
+    <color name="netral2">#5B5E6F</color>
 </resources>

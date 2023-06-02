@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EcoGreenPath_C23-PM02</string>
+    <string name="app_name">EcoGreenPath</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -39,4 +39,5 @@
     <string name="onboarding_text">Before start\nlets answer this few question</string>
     <string name="end_kuisioner">All Set\nLet\'s Go to the\nHomepage</string>
     <string name="let_s_go">Let\'s Go</string>
+    <string name="profile">Profile</string>
 </resources>

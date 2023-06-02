@@ -12,21 +12,15 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.ecogreenpath_c23_pm02.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_maps"
         android:name="com.example.ecogreenpath_c23_pm02.ui.maps.MapsFragment"
         android:label="@string/maps"
-        tools:layout="@layout/fragment_slideshow" />
-
+        tools:layout="@layout/fragment_slideshow"/>
     <fragment
-        android:id="@+id/nav_about_us"
-        android:name="com.example.ecogreenpath_c23_pm02.ui.aboutus.AboutUsFragment"
-        android:label="@string/about_us"
-        tools:layout="@layout/fragment_about_us"/>
+        android:id="@+id/nav_profile"
+        android:name="com.example.ecogreenpath_c23_pm02.ui.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile"/>
+
 
 </navigation>
