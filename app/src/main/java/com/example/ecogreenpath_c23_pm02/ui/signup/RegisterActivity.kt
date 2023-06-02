@@ -47,9 +47,9 @@ class RegisterActivity : AppCompatActivity() {
                 val email = emailEditText.text.toString()
                 val password = passwordEditText.text.toString()
 
-                val name = "$firstName $lastName"
+                val username = userNameEditText.text.toString()
 
-                viewModel.register(name, email, password).observe(this@RegisterActivity){ result ->
+                viewModel.register(username, firstName,lastName,phoneNumber, email, password, birthDate).observe(this@RegisterActivity){ result ->
                     when (result){
                         is Result.Loading -> {
                             binding.registButton.isEnabled = false
@@ -68,11 +68,6 @@ class RegisterActivity : AppCompatActivity() {
                                 create()
                                 show()
                             }
-                            println("Name : $name")
-                            println("phone number : $phoneNumber")
-                            println("Birth Date : $birthDate")
-                            println("email : $email")
-                            println("password : $password")
                         }
                         is Result.Error -> {
                             binding.registButton.isEnabled = true
@@ -120,22 +115,24 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun playAnimation(){
-        val title = ObjectAnimator.ofFloat(binding.tvLogin, View.ALPHA, 1f).setDuration(500)
-        val firstNameTextView = ObjectAnimator.ofFloat(binding.firstNameTextView, View.ALPHA, 1f).setDuration(500)
-        val lastNameTextView = ObjectAnimator.ofFloat(binding.lastNameTextView, View.ALPHA, 1f).setDuration(500)
-        val firstNameEditTextLayout = ObjectAnimator.ofFloat(binding.firstNameEditTextLayout, View.ALPHA, 1f).setDuration(500)
-        val lastNameEditTextLayout = ObjectAnimator.ofFloat(binding.lastNameEditTextLayout, View.ALPHA, 1f).setDuration(500)
-        val phoneTextView = ObjectAnimator.ofFloat(binding.phoneNumberTextView, View.ALPHA, 1f).setDuration(500)
-        val phoneNumberEditTextLayout = ObjectAnimator.ofFloat(binding.phoneNumberInputLayout, View.ALPHA, 1f).setDuration(500)
-        val birthDateTextView = ObjectAnimator.ofFloat(binding.birthDate, View.ALPHA, 1f).setDuration(500)
-        val dateSelectionView = ObjectAnimator.ofFloat(binding.dateSelectionView, View.ALPHA, 1f).setDuration(500)
-        val datePickerButton = ObjectAnimator.ofFloat(binding.datePicker, View.ALPHA, 1f).setDuration(500)
-        val emailTextView = ObjectAnimator.ofFloat(binding.emailTextView, View.ALPHA, 1f).setDuration(500)
-        val emailEditTextLayout = ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1f).setDuration(500)
-        val passwordTextView = ObjectAnimator.ofFloat(binding.passwordTextView, View.ALPHA, 1f).setDuration(500)
-        val passwordEditTextLayout = ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(500)
-        val signup = ObjectAnimator.ofFloat(binding.registButton, View.ALPHA, 1f).setDuration(500)
-        val already = ObjectAnimator.ofFloat(binding.tvlogin, View.ALPHA, 1f).setDuration(500)
+        val title = ObjectAnimator.ofFloat(binding.tvLogin, View.ALPHA, 1f).setDuration(200)
+        val firstNameTextView = ObjectAnimator.ofFloat(binding.firstNameTextView, View.ALPHA, 1f).setDuration(200)
+        val lastNameTextView = ObjectAnimator.ofFloat(binding.lastNameTextView, View.ALPHA, 1f).setDuration(200)
+        val firstNameEditTextLayout = ObjectAnimator.ofFloat(binding.firstNameEditTextLayout, View.ALPHA, 1f).setDuration(200)
+        val lastNameEditTextLayout = ObjectAnimator.ofFloat(binding.lastNameEditTextLayout, View.ALPHA, 1f).setDuration(200)
+        val phoneTextView = ObjectAnimator.ofFloat(binding.phoneNumberTextView, View.ALPHA, 1f).setDuration(200)
+        val phoneNumberEditTextLayout = ObjectAnimator.ofFloat(binding.phoneNumberInputLayout, View.ALPHA, 1f).setDuration(200)
+        val birthDateTextView = ObjectAnimator.ofFloat(binding.birthDate, View.ALPHA, 1f).setDuration(200)
+        val dateSelectionView = ObjectAnimator.ofFloat(binding.dateSelectionView, View.ALPHA, 1f).setDuration(200)
+        val datePickerButton = ObjectAnimator.ofFloat(binding.datePicker, View.ALPHA, 1f).setDuration(200)
+        val usernameTextView = ObjectAnimator.ofFloat(binding.usernameTextView, View.ALPHA, 1f).setDuration(200)
+        val usernameEditTextLayout = ObjectAnimator.ofFloat(binding.usernameInputLayout, View.ALPHA, 1f).setDuration(200)
+        val emailTextView = ObjectAnimator.ofFloat(binding.emailTextView, View.ALPHA, 1f).setDuration(200)
+        val emailEditTextLayout = ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1f).setDuration(200)
+        val passwordTextView = ObjectAnimator.ofFloat(binding.passwordTextView, View.ALPHA, 1f).setDuration(200)
+        val passwordEditTextLayout = ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(200)
+        val signup = ObjectAnimator.ofFloat(binding.registButton, View.ALPHA, 1f).setDuration(200)
+        val already = ObjectAnimator.ofFloat(binding.tvlogin, View.ALPHA, 1f).setDuration(200)
 
 
         AnimatorSet().apply {
@@ -150,6 +147,8 @@ class RegisterActivity : AppCompatActivity() {
                 birthDateTextView,
                 dateSelectionView,
                 datePickerButton,
+                usernameTextView,
+                usernameEditTextLayout,
                 emailTextView,
                 emailEditTextLayout,
                 passwordTextView,

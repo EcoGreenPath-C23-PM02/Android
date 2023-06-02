@@ -3,24 +3,19 @@ package com.example.ecogreenpath_c23_pm02.data.response
 import com.google.gson.annotations.SerializedName
 
 data class LoginResponse(
-
-    @field:SerializedName("loginResult")
-    val loginResult: LoginResult,
-
-    @field:SerializedName("error")
-    val error: Boolean,
-
     @field:SerializedName("message")
-    val message: String
+    val message: LoginResult
 )
 
 data class LoginResult(
+    @field:SerializedName("status")
+    val status: String,
 
-    @field:SerializedName("name")
-    val name: String,
+    @field:SerializedName("username")
+    val username: String,
 
-    @field:SerializedName("userId")
-    val userId: String,
+    @field:SerializedName("password")
+    val password: String,
 
     @field:SerializedName("token")
     val token: String

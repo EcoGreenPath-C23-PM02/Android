@@ -18,10 +18,11 @@ class AppRepository (
         }
     }
 
-    fun login(email: String, password: String): LiveData<Result<LoginResponse>> = liveData {
+    fun login(username: String, password: String): LiveData<Result<LoginResponse>> = liveData {
+        val loginRequestBody = LoginRequest(username,password)
         emit(Result.Loading)
         try {
-            val data = apiService.login(email, password)
+            val data = apiService.loginRequest(loginRequestBody)
             emit(Result.Success(data))
         } catch (e: Exception) {
             Log.d("Story Repository", "login: ${e.message.toString()}")
@@ -29,14 +30,21 @@ class AppRepository (
         }
     }
 
+
+
     fun register(
-        name: String,
+        username: String,
+        firstName: String,
+        lastName: String,
+        phoneNumber: String,
         email: String,
-        password: String
+        password: String,
+        birth: String
     ): LiveData<Result<GeneralResponse>> = liveData {
+        val registRequestBody = RegisterRequest(username,firstName,lastName,phoneNumber,email,password,birth)
         emit(Result.Loading)
         try {
-            val data = apiService.register(name, email, password)
+            val data = apiService.registerRequest(registRequestBody)
             emit(Result.Success(data))
         } catch (e: Exception) {
             Log.d("Register", e.message.toString())
