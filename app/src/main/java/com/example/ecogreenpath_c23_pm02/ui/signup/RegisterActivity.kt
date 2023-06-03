@@ -12,8 +12,11 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.ecogreenpath_c23_pm02.R
+import com.example.ecogreenpath_c23_pm02.data.pref.PreferenceDataSource
 import com.example.ecogreenpath_c23_pm02.data.response.Result
 import com.example.ecogreenpath_c23_pm02.databinding.ActivityRegisterBinding
+import com.example.ecogreenpath_c23_pm02.ui.MainActivity
+import com.example.ecogreenpath_c23_pm02.ui.kuisioner.KuisionerActivity
 import com.example.ecogreenpath_c23_pm02.ui.login.LoginActivity
 import com.example.ecogreenpath_c23_pm02.utility.ViewModelFactory
 import com.example.ecogreenpath_c23_pm02.utility.formatDate
@@ -25,6 +28,10 @@ class RegisterActivity : AppCompatActivity() {
 
     private val viewModel: RegisterViewModel by viewModels<RegisterViewModel> {
         ViewModelFactory.getInstance(this)
+    }
+
+    private val pref by lazy {
+        PreferenceDataSource.invoke(this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,7 +70,34 @@ class RegisterActivity : AppCompatActivity() {
                                 setTitle("Yeay!")
                                 setMessage("Register Success, Welcome to Homepage")
                                 setPositiveButton("Continue") {_,_ ->
-                                    finish()
+                                    viewModel.login(username, password).observe(this@RegisterActivity){ result ->
+                                        when(result){
+                                            is Result.Loading -> {
+                                                showLoading(true)
+                                            }
+                                            is Result.Success ->{
+                                                showLoading(false)
+                                                result.data.let {
+                                                    if (it.message.status == "login success"){
+                                                        pref.saveAuthToken(it.message.token)
+                                                        message(it.message.status)
+                                                        intent =
+                                                            Intent(this@RegisterActivity, KuisionerActivity::class.java)
+                                                        intent.flags =
+                                                            Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                                                        startActivity(intent)
+                                                        finish()
+                                                    }else{
+                                                        message(it.message.toString())
+                                                    }
+                                                }
+                                            }
+                                            is Result.Error -> {
+                                                showLoading(false)
+                                                message(result.error)
+                                            }
+                                        }
+                                    }
                                 }
                                 create()
                                 show()

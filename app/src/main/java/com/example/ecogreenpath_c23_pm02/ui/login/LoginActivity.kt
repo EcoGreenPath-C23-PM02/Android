@@ -70,7 +70,6 @@ class LoginActivity : AppCompatActivity() {
                                 message(result.error)
                             }
                         }
-
                     }
                 }
             }

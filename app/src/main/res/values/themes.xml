@@ -39,6 +39,11 @@
 
 
     <style name="Theme.EcoGreenPath_C23PM02.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+  <!-- Base application theme. -->
+    <style name="Base.Theme.EcoGreenPath_C23PM02" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
 
 
 

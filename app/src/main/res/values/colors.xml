@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gainsboro">#F5F5F5</color>
     <color name="light_green_background">#EDF1D6</color>
+    <color name="bottom_nav_color">#EBF1C5</color>
     <color name="header_green">#D9E9D1</color>
     <color name="font_color1">#5F8D4E</color>
     <color name="font_color2">#9DC08B</color>
@@ -29,4 +30,5 @@
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
+    <color name="point_color">#F96D01</color>
 </resources>
