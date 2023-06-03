@@ -14,6 +14,7 @@ import com.example.ecogreenpath_c23_pm02.databinding.FragmentProfileBinding
 import com.example.ecogreenpath_c23_pm02.ui.aboutus.AboutActivity
 import com.example.ecogreenpath_c23_pm02.ui.aboutus.AboutUsFragment
 import com.example.ecogreenpath_c23_pm02.ui.login.LoginActivity
+import com.example.ecogreenpath_c23_pm02.ui.profile.personalData.PersonalDataActivity
 
 class ProfileFragment : Fragment() {
 
@@ -31,7 +32,8 @@ class ProfileFragment : Fragment() {
     ): View {
         _binding = FragmentProfileBinding.inflate(inflater,container,false)
         binding.personalDataButton.setOnClickListener{
-            message("This is personal data")
+            val intent = Intent(requireContext(), PersonalDataActivity::class.java)
+            startActivity(intent)
         }
         binding.settingsButton.setOnClickListener {
             message("This is settings Button")

@@ -30,8 +30,6 @@ class AppRepository (
         }
     }
 
-
-
     fun register(
         username: String,
         firstName: String,
@@ -52,5 +50,24 @@ class AppRepository (
         }
     }
 
+
+    suspend fun getUserProfile(id:String): Result<UserData>{
+        return try {
+            val response = apiService.getUserProfile(id)
+
+            if (response.isSuccessful){
+                val userProfile = response.body()
+                if (userProfile != null){
+                    Result.Success(userProfile)
+                }else{
+                    Result.Error("User profile data is null")
+                }
+            }else {
+                Result.Error("Failed to retrieve user profile: ${response.message()}")
+            }
+        } catch (e: Exception) {
+            Result.Error("An error occurred: ${e.message}")
+        }
+    }
 
 }

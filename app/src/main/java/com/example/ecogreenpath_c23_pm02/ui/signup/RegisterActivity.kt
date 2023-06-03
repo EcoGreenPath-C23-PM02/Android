@@ -13,6 +13,8 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.ecogreenpath_c23_pm02.R
 import com.example.ecogreenpath_c23_pm02.data.pref.PreferenceDataSource
+import com.example.ecogreenpath_c23_pm02.data.pref.UserSharedPreferences
+import com.example.ecogreenpath_c23_pm02.data.response.Profile
 import com.example.ecogreenpath_c23_pm02.data.response.Result
 import com.example.ecogreenpath_c23_pm02.databinding.ActivityRegisterBinding
 import com.example.ecogreenpath_c23_pm02.ui.MainActivity
@@ -81,6 +83,8 @@ class RegisterActivity : AppCompatActivity() {
                                                     if (it.message.status == "login success"){
                                                         pref.saveAuthToken(it.message.token)
                                                         message(it.message.status)
+                                                        val userId = it.message.user_id
+                                                        UserSharedPreferences.saveUserId(this@RegisterActivity, userId)
                                                         intent =
                                                             Intent(this@RegisterActivity, KuisionerActivity::class.java)
                                                         intent.flags =

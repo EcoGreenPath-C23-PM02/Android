@@ -13,3 +13,22 @@ data class LoginRequest(
     val username: String,
     val password: String
 )
+
+data class UserData(
+    val user_id: String,
+    val username: String,
+    val email: String,
+    val password: String,
+    val phone_number: String,
+    val birth: String,
+    val point: Int?,
+    val firstName: String,
+    val lastName: String,
+    val profile_picture: String?,
+    val createdAt: String
+)
+
+
+object Profile {
+    lateinit var userId: String
+}

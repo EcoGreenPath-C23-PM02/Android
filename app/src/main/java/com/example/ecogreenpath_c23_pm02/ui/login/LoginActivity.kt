@@ -10,6 +10,8 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.ecogreenpath_c23_pm02.ui.MainActivity
 import com.example.ecogreenpath_c23_pm02.data.pref.PreferenceDataSource
+import com.example.ecogreenpath_c23_pm02.data.pref.UserSharedPreferences
+import com.example.ecogreenpath_c23_pm02.data.response.Profile
 import com.example.ecogreenpath_c23_pm02.data.response.Result
 import com.example.ecogreenpath_c23_pm02.databinding.ActivityLoginBinding
 import com.example.ecogreenpath_c23_pm02.ui.signup.RegisterActivity
@@ -54,6 +56,8 @@ class LoginActivity : AppCompatActivity() {
                                     if (it.message.status == "login success"){
                                         pref.saveAuthToken(it.message.token)
                                         message(it.message.status)
+                                        val userId = it.message.user_id
+                                        UserSharedPreferences.saveUserId(this@LoginActivity, userId)
                                         intent =
                                             Intent(this@LoginActivity, MainActivity::class.java)
                                         intent.flags =
@@ -61,7 +65,8 @@ class LoginActivity : AppCompatActivity() {
                                         startActivity(intent)
                                         finish()
                                     }else{
-                                        message(it.message.toString())
+                                        val errorMessage = it.message.toString() ?: "Unknown error"
+                                        message(errorMessage)
                                     }
                                 }
                             }
