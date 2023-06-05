@@ -34,14 +34,20 @@
         <activity
             android:name=".ui.aboutus.AboutActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.aboutus.AboutUsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_about_us"
-            android:theme="@style/Theme.EcoGreenPath_C23PM02" />
+<!--        <activity-->
+<!--            android:name=".ui.aboutus.AboutUsActivity"-->
+<!--            android:exported="false"-->
+<!--            android:label="@string/title_activity_about_us"-->
+<!--            android:theme="@style/Theme.EcoGreenPath_C23PM02" />-->
         <activity
             android:name=".ui.kuisioner.KuisionerActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ui.signup.RegisterActivity"
             android:exported="false" />
@@ -51,11 +57,7 @@
         <activity
             android:name=".ui.splashscreen.SplashScreenActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ui.MainActivity"

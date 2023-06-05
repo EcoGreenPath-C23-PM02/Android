@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/activity_vertical_margin"
-    android:background="@color/gainsboro"
+    android:background="@color/on_primary_color"
     tools:context=".ui.kuisioner.OnboardingKuisionerFragment">
     <RelativeLayout
         android:padding="8dp"

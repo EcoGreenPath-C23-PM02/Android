@@ -85,10 +85,8 @@ class RegisterActivity : AppCompatActivity() {
                                                         message(it.message.status)
                                                         val userId = it.message.user_id
                                                         UserSharedPreferences.saveUserId(this@RegisterActivity, userId)
-                                                        intent =
-                                                            Intent(this@RegisterActivity, KuisionerActivity::class.java)
-                                                        intent.flags =
-                                                            Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                                                        intent = Intent(this@RegisterActivity, KuisionerActivity::class.java)
+                                                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                                                         startActivity(intent)
                                                         finish()
                                                     }else{
