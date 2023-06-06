@@ -3,6 +3,9 @@ package com.example.ecogreenpath_c23_pm02.api
 import com.example.ecogreenpath_c23_pm02.data.response.GeneralResponse
 import com.example.ecogreenpath_c23_pm02.data.response.LoginRequest
 import com.example.ecogreenpath_c23_pm02.data.response.LoginResponse
+import com.example.ecogreenpath_c23_pm02.data.response.ProfileData
+import com.example.ecogreenpath_c23_pm02.data.response.ProfileResponse
+import com.example.ecogreenpath_c23_pm02.data.response.QuestResponse
 import com.example.ecogreenpath_c23_pm02.data.response.RegisterRequest
 import com.example.ecogreenpath_c23_pm02.data.response.UserData
 import okhttp3.RequestBody
@@ -29,5 +32,12 @@ interface ApiService {
     @GET("profile/{id}")
     suspend fun getUserProfile(
         @Path("id") id : String
-    ) : Response<UserData>
+    ) : ProfileResponse
+
+    @GET("quest")
+    suspend fun getQuest() : QuestResponse
+
+
+
+
 }

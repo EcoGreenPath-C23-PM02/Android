@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/tv_login"
+        android:id="@+id/iv_profile"
         android:layout_width="128dp"
         android:layout_height="128dp"
         android:layout_marginTop="16dp"
@@ -32,7 +32,7 @@
         android:textColor="@color/font_color1"
         android:text="First Name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile" />
 
     <TextView
         android:id="@+id/lastNameTextView"
@@ -58,31 +58,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="@color/font_color1"
             android:inputType="text"
             app:passwordToggleEnabled="true"
             android:required="true"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lastNameEditTextLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/firstNameEditTextLayout"
-        app:layout_constraintTop_toBottomOf="@+id/firstNameTextView">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/lastnameEditText"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lastNameEditTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/firstNameEditTextLayout"
+            app:layout_constraintTop_toBottomOf="@+id/firstNameTextView">
 
-            app:passwordToggleEnabled="true"
-            android:required="true"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lastnameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:required="true"
+                android:textColor="@color/font_color1"
+                app:passwordToggleEnabled="true" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/phoneNumberTextView"
@@ -113,6 +116,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="phone"
+            android:textColor="@color/font_color1"
             app:passwordToggleEnabled="true"
             android:required="true"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -145,6 +149,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:required="true"
+                android:textColor="@color/font_color1"
                 app:passwordToggleEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -176,6 +181,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:required="true"
+            android:textColor="@color/font_color1"
             app:passwordToggleEnabled="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -190,26 +196,26 @@
         app:layout_constraintStart_toStartOf="@+id/usernameInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/usernameInputLayout" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailEditTextLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/emailTextView"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextView"
-        app:startIconDrawable="@drawable/baseline_email_24">
-
-        <com.example.ecogreenpath_c23_pm02.edittext.CustomEmail
-            android:id="@+id/emailEditText"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailEditTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/usernameInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/emailTextView"
+            app:layout_constraintTop_toBottomOf="@+id/emailTextView"
+            app:startIconDrawable="@drawable/baseline_email_24">
+
+            <com.example.ecogreenpath_c23_pm02.edittext.CustomEmail
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/font_color1"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/passwordTextView"
@@ -222,42 +228,52 @@
         app:layout_constraintStart_toStartOf="@+id/emailEditTextLayout"
         app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordEditTextLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/passwordTextView"
-        app:layout_constraintTop_toBottomOf="@+id/passwordTextView"
-        app:passwordToggleEnabled="true"
-        app:startIconDrawable="@drawable/baseline_key_24">
-
-        <com.example.ecogreenpath_c23_pm02.edittext.CustomInput
-            android:id="@+id/passwordEditText"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordEditTextLayout"
+            style="@style/CustomEditText"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/emailEditTextLayout"
+            app:layout_constraintStart_toStartOf="@+id/passwordTextView"
+            app:layout_constraintTop_toBottomOf="@+id/passwordTextView"
             app:passwordToggleEnabled="true"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
+            app:startIconDrawable="@drawable/baseline_key_24">
 
-    <Button
-        android:id="@+id/registButton"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:backgroundTint="@color/font_color1"
-        android:textSize="20sp"
-        android:fontFamily="@font/nunito_black"
-        android:text="Edit Profile"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/passwordEditTextLayout"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
+            <com.example.ecogreenpath_c23_pm02.edittext.CustomInput
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textColor="@color/font_color1"
+                app:passwordToggleEnabled="true"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/registButton"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/font_color1"
+            android:fontFamily="@font/nunito_black"
+            android:text="Edit Profile"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/passwordEditTextLayout"
+            app:layout_constraintStart_toStartOf="@+id/passwordEditTextLayout"
+            app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
+
+        <ProgressBar
+            android:id="@+id/pdProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

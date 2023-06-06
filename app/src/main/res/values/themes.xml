@@ -8,7 +8,7 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/secondary_color</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/on_primary_color</item>
+        <item name="colorOnSecondary">@color/primary_color</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
@@ -35,6 +35,10 @@
     <style name="Button.arrow" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:background">@color/on_primary_color</item>
         <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="CustomEditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColor">@color/primary_variant_color</item>
     </style>
 
 

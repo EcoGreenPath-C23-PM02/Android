@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.example.ecogreenpath_c23_pm02.api.ApiService
+import kotlin.math.log
 
 class AppRepository (
     private val apiService: ApiService
@@ -51,23 +52,27 @@ class AppRepository (
     }
 
 
-    suspend fun getUserProfile(id:String): Result<UserData>{
-        return try {
-            val response = apiService.getUserProfile(id)
-
-            if (response.isSuccessful){
-                val userProfile = response.body()
-                if (userProfile != null){
-                    Result.Success(userProfile)
-                }else{
-                    Result.Error("User profile data is null")
-                }
-            }else {
-                Result.Error("Failed to retrieve user profile: ${response.message()}")
-            }
-        } catch (e: Exception) {
-            Result.Error("An error occurred: ${e.message}")
+    fun getUserProfile(id:String): LiveData<Result<ProfileResponse>> = liveData{
+        emit(Result.Loading)
+        try {
+            val data = apiService.getUserProfile(id)
+            emit(Result.Success(data))
+        } catch (e : Exception){
+            Log.d("Profile", e.message.toString())
+            emit(Result.Error(e.message.toString()))
         }
     }
 
+    fun getQuestList(): LiveData<Result<List<QuestList>>> = liveData {
+        emit(Result.Loading)
+
+        try {
+            val response = apiService.getQuest()
+            val questResponse = response.data
+            emit(Result.Success(questResponse))
+        } catch (e: Exception) {
+            Log.d("Quest", e.message.toString())
+            emit(Result.Error(e.toString()))
+        }
+    }
 }

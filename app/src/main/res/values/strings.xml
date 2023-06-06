@@ -87,4 +87,11 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="quest_desc">The quest aims to promote reforestation, address deforestation, and raise awareness about the importance of trees in mitigating climate change, preserving biodiversity, and improving the environment. You got 100 point for 1 tree you plant</string>
+
+    <string-array name="quest_title">
+        <item>Tree Planting</item>
+        <item></item>
+    </string-array>
+
+
 </resources>

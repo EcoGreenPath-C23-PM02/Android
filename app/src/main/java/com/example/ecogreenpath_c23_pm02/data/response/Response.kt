@@ -38,6 +38,28 @@ data class ProfileResponse(
     val data: List<ProfileData>
 )
 
+
+data class QuestResponse(
+    @SerializedName("data")
+    val data: List<QuestList>
+)
+
+
+data class QuestList(
+    @SerializedName("quest_id")
+    val questId: String,
+    @SerializedName("quest")
+    val quest: String,
+    @SerializedName("poin")
+    val points: Int,
+    @SerializedName("quest_desc")
+    val questDescription: String,
+    @SerializedName("quest_location")
+    val questLocation: String
+)
+
+
+
 data class ProfileData(
     @SerializedName("user_id")
     val userId: String,
