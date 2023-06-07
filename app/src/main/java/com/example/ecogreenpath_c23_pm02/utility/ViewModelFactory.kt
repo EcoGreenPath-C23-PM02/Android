@@ -9,6 +9,7 @@ import com.example.ecogreenpath_c23_pm02.ui.login.LoginViewModel
 import com.example.ecogreenpath_c23_pm02.ui.maps.MapsViewModel
 import com.example.ecogreenpath_c23_pm02.ui.profile.personalData.PersonalDataViewModel
 import com.example.ecogreenpath_c23_pm02.ui.quest.QuestViewModel
+import com.example.ecogreenpath_c23_pm02.ui.quest.questUpload.QuestUploadViewModel
 import com.example.ecogreenpath_c23_pm02.ui.signup.RegisterViewModel
 
 class ViewModelFactory private constructor(
@@ -37,6 +38,9 @@ class ViewModelFactory private constructor(
             }
             modelClass.isAssignableFrom(QuestViewModel::class.java) -> {
                 QuestViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(QuestUploadViewModel::class.java) -> {
+                QuestUploadViewModel(repository) as T
             }
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
         }

@@ -31,7 +31,16 @@ data class GeneralResponse(
     val message: String
 )
 
+data class QuestUpload(
+    val data: QuestUploadResponse
+)
 
+
+data class QuestUploadResponse(
+    val id: String,
+    val imageUrl: String,
+    val userDesc: String
+)
 
 data class ProfileResponse(
     @SerializedName("data")

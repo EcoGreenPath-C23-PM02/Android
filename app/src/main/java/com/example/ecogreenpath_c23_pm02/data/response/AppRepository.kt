@@ -4,6 +4,8 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.example.ecogreenpath_c23_pm02.api.ApiService
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import kotlin.math.log
 
 class AppRepository (
@@ -49,6 +51,22 @@ class AppRepository (
             Log.d("Register", e.message.toString())
             emit(Result.Error(e.message.toString()))
         }
+    }
+
+    fun uploadQuest(
+        id: String,
+        image: MultipartBody.Part,
+        user_desc: RequestBody
+    ): LiveData<Result<QuestUpload>> = liveData {
+        emit(Result.Loading)
+        try {
+            val data = apiService.uploadImage(id,image,user_desc)
+            emit(Result.Success(data))
+        }catch (e : Exception){
+            Log.d("Upload", e.message.toString())
+            emit(Result.Error(e.toString()))
+        }
+
     }
 
 
