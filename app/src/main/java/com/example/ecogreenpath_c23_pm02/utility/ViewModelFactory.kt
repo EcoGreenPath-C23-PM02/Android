@@ -42,6 +42,9 @@ class ViewModelFactory private constructor(
             modelClass.isAssignableFrom(QuestUploadViewModel::class.java) -> {
                 QuestUploadViewModel(repository) as T
             }
+            modelClass.isAssignableFrom(MapsViewModel::class.java) -> {
+                MapsViewModel(repository) as T
+            }
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
         }
     }

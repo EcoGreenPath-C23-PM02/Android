@@ -67,8 +67,6 @@ data class QuestList(
     val questLocation: String
 )
 
-
-
 data class ProfileData(
     @SerializedName("user_id")
     val userId: String,
@@ -87,4 +85,28 @@ data class ProfileData(
     val profilePicture: String?,
     @SerializedName("createdAt")
     val createdAt: String
+)
+
+
+data class MapsResponse(
+    @SerializedName("data")
+    val data: List<MapsData>
+)
+
+data class MapsData(
+    @SerializedName("village_id")
+    val villageId: String,
+    @SerializedName("village_latitude")
+    val villageLatitude: String,
+    @SerializedName("village_longitude")
+    val villageLongitude: String,
+    val name: String,
+    val description: String?,
+    val province: String,
+    val regency: String,
+    val district: String,
+    @SerializedName("social_media")
+    val socialMedia: String?,
+    val contact: String?,
+    val picture: String?
 )

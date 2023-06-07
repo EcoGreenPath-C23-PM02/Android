@@ -93,4 +93,16 @@ class AppRepository (
             emit(Result.Error(e.toString()))
         }
     }
+
+    fun getMapsList() : LiveData<Result<List<MapsData>>> = liveData {
+        emit(Result.Loading)
+        try {
+            val response = apiService.getMaps()
+            val mapsResponse = response.data
+            emit(Result.Success(mapsResponse))
+        }catch (e:Exception){
+            Log.d("Maps", e.message.toString())
+            emit(Result.Error(e.toString()))
+        }
+    }
 }

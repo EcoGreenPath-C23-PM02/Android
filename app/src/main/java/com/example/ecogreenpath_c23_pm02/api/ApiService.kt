@@ -3,6 +3,7 @@ package com.example.ecogreenpath_c23_pm02.api
 import com.example.ecogreenpath_c23_pm02.data.response.GeneralResponse
 import com.example.ecogreenpath_c23_pm02.data.response.LoginRequest
 import com.example.ecogreenpath_c23_pm02.data.response.LoginResponse
+import com.example.ecogreenpath_c23_pm02.data.response.MapsResponse
 import com.example.ecogreenpath_c23_pm02.data.response.ProfileData
 import com.example.ecogreenpath_c23_pm02.data.response.ProfileResponse
 import com.example.ecogreenpath_c23_pm02.data.response.QuestResponse
@@ -49,6 +50,8 @@ interface ApiService {
         @Part("user_desc") user_desc : RequestBody
     ) : QuestUpload
 
+    @GET("maps")
+    suspend fun getMaps() : MapsResponse
 
 
 }

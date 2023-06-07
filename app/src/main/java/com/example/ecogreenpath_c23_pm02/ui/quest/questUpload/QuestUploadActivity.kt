@@ -19,6 +19,7 @@ import androidx.lifecycle.ViewModel
 import com.example.ecogreenpath_c23_pm02.data.pref.UserSharedPreferences
 import com.example.ecogreenpath_c23_pm02.data.response.Result
 import com.example.ecogreenpath_c23_pm02.databinding.ActivityQuestUploadBinding
+import com.example.ecogreenpath_c23_pm02.ui.MainActivity
 import com.example.ecogreenpath_c23_pm02.ui.quest.QuestActivity
 import com.example.ecogreenpath_c23_pm02.utility.ViewModelFactory
 import com.example.ecogreenpath_c23_pm02.utility.gone
@@ -91,7 +92,7 @@ class QuestUploadActivity : AppCompatActivity() {
     private fun uploadQuestImage(){
         val description = binding.phoneNumberEditText.text.toString()
 
-        if (getFile != null){
+        if (getFile != null ){
             val file = reduceFileImage(getFile as File)
             val requestImageFile = file.asRequestBody("image/jpg".toMediaType())
             val userId = UserSharedPreferences.getUserId(this)
@@ -118,7 +119,7 @@ class QuestUploadActivity : AppCompatActivity() {
                 is Result.Success -> {
                     showLoading(false)
                     result.data.let {it ->
-                        Intent(this@QuestUploadActivity, QuestActivity::class.java).also {
+                        Intent(this@QuestUploadActivity, MainActivity::class.java).also {
                             startActivity(it)
                             finishAffinity()
                         }
@@ -131,7 +132,6 @@ class QuestUploadActivity : AppCompatActivity() {
             }
         }
     }
-
 
     private fun startCamera(){
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
