@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RadioButtonStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/nunito_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@drawable/radio_text_selector</item>
+    </style>
+</resources>

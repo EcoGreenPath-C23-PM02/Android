@@ -2,10 +2,14 @@ package com.example.ecogreenpath_c23_pm02.data.response
 
 import android.util.Log
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
 import com.example.ecogreenpath_c23_pm02.api.ApiService
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import kotlin.math.log
 
 class AppRepository (
@@ -105,4 +109,23 @@ class AppRepository (
             emit(Result.Error(e.toString()))
         }
     }
+
+
+
+    suspend fun getKuisioner(): Result<List<DataKuisioner>> {
+        return try {
+            val response = apiService.getKuisioner()
+            if (response.isSuccessful) {
+                val kuisionerResponse = response.body()
+                kuisionerResponse?.data?.let {
+                    Result.Success(it)
+                } ?: Result.Error("Empty response body")
+            } else {
+                Result.Error("Failed to fetch kuisioner")
+            }
+        } catch (e: Exception) {
+            Result.Error(e.message ?: "An error occurred")
+        }
+    }
+
 }

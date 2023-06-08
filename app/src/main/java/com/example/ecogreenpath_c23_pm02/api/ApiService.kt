@@ -1,6 +1,7 @@
 package com.example.ecogreenpath_c23_pm02.api
 
 import com.example.ecogreenpath_c23_pm02.data.response.GeneralResponse
+import com.example.ecogreenpath_c23_pm02.data.response.KuisionerResponse
 import com.example.ecogreenpath_c23_pm02.data.response.LoginRequest
 import com.example.ecogreenpath_c23_pm02.data.response.LoginResponse
 import com.example.ecogreenpath_c23_pm02.data.response.MapsResponse
@@ -53,5 +54,7 @@ interface ApiService {
     @GET("maps")
     suspend fun getMaps() : MapsResponse
 
+    @GET("questionnaire")
+    suspend fun getKuisioner(): Response<KuisionerResponse>
 
 }

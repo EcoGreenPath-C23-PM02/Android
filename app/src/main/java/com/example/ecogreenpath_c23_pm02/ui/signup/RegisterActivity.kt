@@ -18,8 +18,8 @@ import com.example.ecogreenpath_c23_pm02.data.response.Profile
 import com.example.ecogreenpath_c23_pm02.data.response.Result
 import com.example.ecogreenpath_c23_pm02.databinding.ActivityRegisterBinding
 import com.example.ecogreenpath_c23_pm02.ui.MainActivity
-import com.example.ecogreenpath_c23_pm02.ui.kuisioner.KuisionerActivity
 import com.example.ecogreenpath_c23_pm02.ui.login.LoginActivity
+import com.example.ecogreenpath_c23_pm02.ui.quistioner.QuisionerActivity
 import com.example.ecogreenpath_c23_pm02.utility.ViewModelFactory
 import com.example.ecogreenpath_c23_pm02.utility.formatDate
 import java.util.Calendar
@@ -85,7 +85,7 @@ class RegisterActivity : AppCompatActivity() {
                                                         message(it.message.status)
                                                         val userId = it.message.user_id
                                                         UserSharedPreferences.saveUserId(this@RegisterActivity, userId)
-                                                        intent = Intent(this@RegisterActivity, KuisionerActivity::class.java)
+                                                        intent = Intent(this@RegisterActivity, QuisionerActivity::class.java)
                                                         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                                                         startActivity(intent)
                                                         finish()

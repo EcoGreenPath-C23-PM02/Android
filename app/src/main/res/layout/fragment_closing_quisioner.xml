@@ -17,9 +17,16 @@
             android:id="@+id/imv_end_kuisioner"
             android:layout_width="210dp"
             android:layout_height="210dp"
-         android:layout_centerHorizontal="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/nav_header_height"
             android:src="@drawable/icon_end_kusioner" />
+        <ImageButton
+            android:id="@+id/btn_arrow_back"
+            android:layout_width="24dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/arrow_back_onboarding" />
 
         <TextView
             android:id="@+id/tv_end_kuisioner"

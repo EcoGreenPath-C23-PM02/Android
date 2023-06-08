@@ -110,3 +110,19 @@ data class MapsData(
     val contact: String?,
     val picture: String?
 )
+
+
+data class KuisionerResponse(
+    @SerializedName("data")
+    val data: List<DataKuisioner>
+)
+
+data class DataKuisioner(
+    @SerializedName("choice")
+    val choice: List<String>,
+    @SerializedName("question")
+    val question: String,
+    @SerializedName("question_id")
+    val questionId: String,
+
+)
