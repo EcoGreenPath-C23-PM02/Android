@@ -6,4 +6,12 @@
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_size_medium">18dp</dimen>
+
+    <dimen name="radio_button_height">40dp</dimen>
+    <dimen name="radio_text_min_size">16sp</dimen>
+    <dimen name="radio_text_max_size">18sp</dimen>
+    <dimen name="radio_text_step_size">2sp</dimen>
+    <dimen name="radio_button_padding">16dp</dimen>
+    <dimen name="radio_button_text_size">14sp</dimen>
+    <dimen name="radio_button_line_spacing_extra">1dp</dimen>
 </resources>
