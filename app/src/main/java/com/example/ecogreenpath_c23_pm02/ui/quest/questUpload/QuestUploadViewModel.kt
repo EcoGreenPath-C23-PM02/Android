@@ -8,4 +8,6 @@ import okhttp3.RequestBody
 class QuestUploadViewModel(private val repository: AppRepository) : ViewModel() {
     fun questUpload(id:String, image:MultipartBody.Part, description:RequestBody) =
         repository.uploadQuest(id,image,description)
+
+
 }

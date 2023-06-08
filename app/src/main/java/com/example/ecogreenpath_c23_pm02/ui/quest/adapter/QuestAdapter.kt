@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ecogreenpath_c23_pm02.data.response.QuestList
+import com.example.ecogreenpath_c23_pm02.data.response.QuestUpload
+import com.example.ecogreenpath_c23_pm02.data.response.pointInput
 import com.example.ecogreenpath_c23_pm02.databinding.QuestItemRowBinding
 import com.example.ecogreenpath_c23_pm02.ui.quest.questUpload.QuestUploadActivity
 
@@ -33,6 +35,7 @@ class QuestAdapter : RecyclerView.Adapter<QuestAdapter.ViewHolder>() {
 
             binding.root.setOnClickListener {
                 val intent = Intent(itemView.context, QuestUploadActivity::class.java)
+                pointInput.questPoint = questResponse.points.toString()
                 itemView.context.startActivity(intent)
             }
         }

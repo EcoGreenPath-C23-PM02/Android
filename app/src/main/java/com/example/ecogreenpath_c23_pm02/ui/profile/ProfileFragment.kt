@@ -16,6 +16,7 @@ import com.example.ecogreenpath_c23_pm02.data.pref.UserSharedPreferences
 import com.example.ecogreenpath_c23_pm02.data.response.ProfileData
 import com.example.ecogreenpath_c23_pm02.data.response.ProfileResponse
 import com.example.ecogreenpath_c23_pm02.data.response.Result
+import com.example.ecogreenpath_c23_pm02.data.response.pointInput
 import com.example.ecogreenpath_c23_pm02.databinding.FragmentProfileBinding
 import com.example.ecogreenpath_c23_pm02.ui.aboutus.AboutActivity
 import com.example.ecogreenpath_c23_pm02.ui.aboutus.AboutUsFragment

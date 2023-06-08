@@ -6,26 +6,25 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import java.util.concurrent.TimeUnit
 
+object MlApiConfig {
 
+    private lateinit var mlApiService: MlApiService
 
-object ApiConfig {
-    private lateinit var apiService: ApiService
-
-    fun getApiService(context: Context): ApiService {
-        if (!ApiConfig::apiService.isInitialized) {
-            val retrofit = Retrofit.Builder()
-                .baseUrl(BuildConfig.APP_BASE_URL)
+    fun getMlApiService(context: Context): MlApiService{
+        if(!MlApiConfig::mlApiService.isInitialized){
+            val mlRetrofit = Retrofit.Builder()
+                .baseUrl(BuildConfig.ML_BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okhttpClient(context))
                 .build()
 
-            apiService = retrofit.create(ApiService::class.java)
+            mlApiService = mlRetrofit.create(MlApiService::class.java)
         }
-        return apiService
+        return mlApiService
     }
+
 
     private fun okhttpClient(context: Context): OkHttpClient {
         return OkHttpClient.Builder()
@@ -41,4 +40,5 @@ object ApiConfig {
             .addInterceptor(AuthenticationToken(context))
             .build()
     }
+
 }

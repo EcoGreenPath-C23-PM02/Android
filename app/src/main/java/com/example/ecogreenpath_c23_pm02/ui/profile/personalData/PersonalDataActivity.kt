@@ -12,7 +12,6 @@ import com.example.ecogreenpath_c23_pm02.api.ApiConfig
 import com.example.ecogreenpath_c23_pm02.api.ApiService
 import com.example.ecogreenpath_c23_pm02.data.pref.UserSharedPreferences
 import com.example.ecogreenpath_c23_pm02.data.response.AppRepository
-import com.example.ecogreenpath_c23_pm02.data.response.Profile
 import com.example.ecogreenpath_c23_pm02.data.response.ProfileData
 import com.example.ecogreenpath_c23_pm02.data.response.ProfileResponse
 import com.example.ecogreenpath_c23_pm02.data.response.Result

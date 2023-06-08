@@ -28,7 +28,11 @@ data class UserData(
     val createdAt: String
 )
 
-
-object Profile {
-    lateinit var userId: String
+object pointInput{
+    lateinit var questPoint: String
+    lateinit var pointSuccess: String
 }
+
+data class PointRequest (
+    val point: String
+)

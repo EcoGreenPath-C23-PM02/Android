@@ -12,12 +12,14 @@ import android.provider.MediaStore
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.lifecycle.ViewModel
 import com.example.ecogreenpath_c23_pm02.data.pref.UserSharedPreferences
 import com.example.ecogreenpath_c23_pm02.data.response.Result
+import com.example.ecogreenpath_c23_pm02.data.response.pointInput
 import com.example.ecogreenpath_c23_pm02.databinding.ActivityQuestUploadBinding
 import com.example.ecogreenpath_c23_pm02.ui.MainActivity
 import com.example.ecogreenpath_c23_pm02.ui.quest.QuestActivity
@@ -119,6 +121,7 @@ class QuestUploadActivity : AppCompatActivity() {
                 is Result.Success -> {
                     showLoading(false)
                     result.data.let {it ->
+
                         Intent(this@QuestUploadActivity, MainActivity::class.java).also {
                             startActivity(it)
                             finishAffinity()

@@ -5,6 +5,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.ecogreenpath_c23_pm02.data.response.AppRepository
 import com.example.ecogreenpath_c23_pm02.data.response.Injection
+import com.example.ecogreenpath_c23_pm02.ui.allTour.allActivity.AllActivitiesViewModel
+import com.example.ecogreenpath_c23_pm02.ui.allTour.allPackage.AllPackageViewModel
+import com.example.ecogreenpath_c23_pm02.ui.detail.detailActivities.DetailActivityViewModel
+import com.example.ecogreenpath_c23_pm02.ui.detail.detailPacket.DetailPackageViewModel
+import com.example.ecogreenpath_c23_pm02.ui.home.HomeViewModel
 import com.example.ecogreenpath_c23_pm02.ui.login.LoginViewModel
 import com.example.ecogreenpath_c23_pm02.ui.maps.MapsViewModel
 import com.example.ecogreenpath_c23_pm02.ui.profile.personalData.PersonalDataViewModel
@@ -44,6 +49,18 @@ class ViewModelFactory private constructor(
             }
             modelClass.isAssignableFrom(MapsViewModel::class.java) -> {
                 MapsViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(AllActivitiesViewModel::class.java) -> {
+                AllActivitiesViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(AllPackageViewModel::class.java) -> {
+                AllPackageViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(DetailActivityViewModel::class.java) -> {
+                DetailActivityViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(DetailPackageViewModel::class.java) -> {
+                DetailPackageViewModel(repository) as T
             }
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
         }

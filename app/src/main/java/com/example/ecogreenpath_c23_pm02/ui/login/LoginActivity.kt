@@ -11,7 +11,7 @@ import androidx.activity.viewModels
 import com.example.ecogreenpath_c23_pm02.ui.MainActivity
 import com.example.ecogreenpath_c23_pm02.data.pref.PreferenceDataSource
 import com.example.ecogreenpath_c23_pm02.data.pref.UserSharedPreferences
-import com.example.ecogreenpath_c23_pm02.data.response.Profile
+
 import com.example.ecogreenpath_c23_pm02.data.response.Result
 import com.example.ecogreenpath_c23_pm02.databinding.ActivityLoginBinding
 import com.example.ecogreenpath_c23_pm02.ui.signup.RegisterActivity
@@ -53,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
                                 binding.loginButton.isEnabled = true
 
                                 result.data.let {
-                                    if (it.message.status == "login success"){
+                                    if (it.message.status == "Login successful"){
                                         pref.saveAuthToken(it.message.token)
                                         message(it.message.status)
                                         val userId = it.message.user_id

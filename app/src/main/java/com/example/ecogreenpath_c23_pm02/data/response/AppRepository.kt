@@ -105,4 +105,65 @@ class AppRepository (
             emit(Result.Error(e.toString()))
         }
     }
+
+    fun getAllActivities() : LiveData<Result<List<DataAllActivity>>> = liveData {
+        emit(Result.Loading)
+        try {
+            val response = apiService.getAllActivity()
+            val allActivityResponse = response.data
+            emit(Result.Success(allActivityResponse))
+        }catch (e:Exception){
+            Log.d("AllActivity", e.message.toString())
+            emit(Result.Error(e.toString()))
+        }
+    }
+
+    fun getDetailActivities(id:String): LiveData<Result<AllActivityResponse>> = liveData {
+        emit(Result.Loading)
+        try {
+            val response = apiService.getDetailActivity(id)
+            emit(Result.Success(response))
+        }catch (e:Exception){
+            Log.d("DetailActivities", e.message.toString())
+            emit(Result.Error(e.toString()))
+        }
+    }
+
+
+    fun getAllPackage() : LiveData<Result<List<DataAllPackage>>> = liveData {
+        emit(Result.Loading)
+        try {
+            val response = apiService.getAllPackage()
+            val allPackageResponse = response.data
+            emit(Result.Success(allPackageResponse))
+        }catch (e:Exception){
+            Log.d("AllPackage", e.message.toString())
+            emit(Result.Error(e.toString()))
+        }
+    }
+
+    fun getDetailPackage(id:String): LiveData<Result<AllPackageResponse>> = liveData {
+        emit(Result.Loading)
+        try {
+            val response = apiService.getDetailPackage(id)
+            emit(Result.Success(response))
+        }catch (e:Exception){
+            Log.d("DetailPackage", e.message.toString())
+            emit(Result.Error(e.toString()))
+        }
+    }
+
+    fun putPoint(id:String, point:String): LiveData<Result<PointResponse>> = liveData {
+        emit(Result.Loading)
+        val pointRequestBody = PointRequest(point)
+        try {
+            val response = apiService.putPoint(id,pointRequestBody)
+            emit(Result.Success(response))
+        }catch (e:Exception){
+            Log.d("Point", e.message.toString())
+            emit(Result.Error(e.toString()))
+        }
+    }
+
+
 }

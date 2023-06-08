@@ -54,7 +54,7 @@ data class QuestResponse(
 )
 
 
-data class QuestList(
+data class  QuestList(
     @SerializedName("quest_id")
     val questId: String,
     @SerializedName("quest")
@@ -109,4 +109,68 @@ data class MapsData(
     val socialMedia: String?,
     val contact: String?,
     val picture: String?
+)
+
+
+
+data class CbfResponse(
+    val recommendations : List<CbfData>
+)
+
+data class CbfData(
+    val activity_id: Int,
+    val activity_name: String,
+    val avg_rating: Double,
+    val budget: String
+)
+
+
+data class CfResponse(
+    val budget: String,
+    val pack_id: Int,
+    val package_name: String,
+    val user_rating: Double
+)
+
+
+data class AllActivityResponse(
+    @SerializedName("data")
+    val data: List<DataAllActivity>
+)
+
+//data class ProfileResponse(
+//    @SerializedName("data")
+//    val data: List<ProfileData>
+//)
+
+data class DataAllActivity(
+    val activity_id: Int,
+    val village_id: String?,
+    val activity_location: String,
+    val activity_name: String,
+    val activity_category: String,
+    val activity_level: String,
+    val activity_desc: String,
+    val budget: Int
+)
+
+data class AllPackageResponse(
+    @SerializedName("data")
+    val data: List<DataAllPackage>
+)
+
+data class DataAllPackage(
+    val pack_id: Int,
+    val village_id: String,
+    val package_name: String,
+    val duration: Int,
+    val budget: Int,
+    val pack_bundle: String,
+    val location: String
+)
+
+
+data class PointResponse(
+    @field:SerializedName("message")
+    val message: String
 )
