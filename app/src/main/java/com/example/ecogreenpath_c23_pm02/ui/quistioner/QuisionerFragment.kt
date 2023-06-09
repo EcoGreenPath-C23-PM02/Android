@@ -134,10 +134,4 @@ class QuisionerFragment : Fragment() {
             }
         }
     }
-
-
-
-
-
-
 }

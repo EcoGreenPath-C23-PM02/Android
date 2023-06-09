@@ -22,7 +22,7 @@ class QuestionnaireViewModel : ViewModel() {
         listOf("Tracking", "Cycling", "Conservation", "Cooking", "Packet Tour"),
         listOf("Solo", "Group tour"),
         listOf("Walking", "Biking", "Car rental", "Public transportation"),
-        listOf("Rice Field Tracking", "Jungle Trekking", "Taro Village Cycling Tour", "Kintamani Down Hill Cycling", "Fireflies Watching", "Cooking Experience"),
+        listOf("Rice Field Trekking", "Jungle Trekking", "Taro Village Cycling Tour", "Kintamani Down Hill Cycling", "Fireflies Watching", "Cooking Experience"),
         listOf("Hiking Journey In Taro Village", "Treasure Hunt & Cooking Battle", "Camping Into The Wild")
     )
 

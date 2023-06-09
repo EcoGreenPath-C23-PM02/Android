@@ -80,9 +80,7 @@
         <!-- android:exported="false" -->
         <!-- android:label="@string/title_activity_about_us" -->
         <!-- android:theme="@style/Theme.EcoGreenPath_C23PM02" /> -->
-        <activity
-            android:name=".ui.kuisioner.KuisionerActivity"
-            android:exported="true" />
+
         <activity
             android:name=".ui.signup.RegisterActivity"
             android:exported="false" />
