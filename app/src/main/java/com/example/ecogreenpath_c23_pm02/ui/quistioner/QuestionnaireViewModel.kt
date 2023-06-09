@@ -22,8 +22,8 @@ class QuestionnaireViewModel : ViewModel() {
         listOf("Tracking", "Cycling", "Conservation", "Cooking", "Packet Tour"),
         listOf("Solo", "Group tour"),
         listOf("Walking", "Biking", "Car rental", "Public transportation"),
-        listOf("Rice Field Tracking", "Jungle Trekking", "Taro Village Cycling Tour", "Kintamani Down Hill Cycling", "Fireflies Watching", "Cooking Experience", "Tri Hita Karana Journey"),
-        listOf("3D 2N Authentic Rural Experience at Tegal dukuh Camp", "Hiking Journey In Taro Village", "Treasure Hunt & Cooking Battle", "Camping Into The Wild")
+        listOf("Rice Field Tracking", "Jungle Trekking", "Taro Village Cycling Tour", "Kintamani Down Hill Cycling", "Fireflies Watching", "Cooking Experience"),
+        listOf("Hiking Journey In Taro Village", "Treasure Hunt & Cooking Battle", "Camping Into The Wild")
     )
 
 
