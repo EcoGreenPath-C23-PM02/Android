@@ -18,7 +18,7 @@ import com.example.ecogreenpath_c23_pm02.data.pref.UserSharedPreferences
 import com.example.ecogreenpath_c23_pm02.data.response.Result
 import com.example.ecogreenpath_c23_pm02.databinding.ActivityRegisterBinding
 import com.example.ecogreenpath_c23_pm02.ui.MainActivity
-import com.example.ecogreenpath_c23_pm02.ui.kuisioner.KuisionerActivity
+
 import com.example.ecogreenpath_c23_pm02.ui.login.LoginActivity
 import com.example.ecogreenpath_c23_pm02.ui.quistioner.QuisionerActivity
 import com.example.ecogreenpath_c23_pm02.utility.ViewModelFactory
@@ -120,6 +120,9 @@ class RegisterActivity : AppCompatActivity() {
                 finish()
             }
         }
+
+
+
     }
 
 
@@ -200,5 +203,8 @@ class RegisterActivity : AppCompatActivity() {
     private fun showLoading(isLoading: Boolean){
         binding.progressbar4.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
+
+
+
 
 }

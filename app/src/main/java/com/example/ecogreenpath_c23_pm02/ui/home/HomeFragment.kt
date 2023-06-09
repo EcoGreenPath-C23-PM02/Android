@@ -1,6 +1,5 @@
 package com.example.ecogreenpath_c23_pm02.ui.home
 
-import android.content.AbstractThreadedSyncAdapter
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ecogreenpath_c23_pm02.data.pref.UserSharedPreferences
 import com.example.ecogreenpath_c23_pm02.data.response.Result
@@ -22,7 +20,6 @@ import com.example.ecogreenpath_c23_pm02.ui.localMarket.LocalMarketActivity
 import com.example.ecogreenpath_c23_pm02.ui.quest.QuestActivity
 import com.example.ecogreenpath_c23_pm02.ui.socialConnect.SocialConnectActivity
 import com.example.ecogreenpath_c23_pm02.utility.MlViewModelFactory
-import com.example.ecogreenpath_c23_pm02.utility.ViewModelFactory
 
 class HomeFragment : Fragment() {
 

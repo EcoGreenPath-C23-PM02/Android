@@ -36,3 +36,4 @@ object pointInput{
 data class PointRequest (
     val point: String
 )
+

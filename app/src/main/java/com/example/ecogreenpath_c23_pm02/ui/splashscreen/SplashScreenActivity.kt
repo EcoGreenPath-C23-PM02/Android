@@ -13,7 +13,7 @@ import com.example.ecogreenpath_c23_pm02.ui.MainActivity
 import com.example.ecogreenpath_c23_pm02.data.pref.PreferenceDataSource
 import com.example.ecogreenpath_c23_pm02.databinding.ActivitySplashSceenBinding
 import com.example.ecogreenpath_c23_pm02.ui.home.HomeFragment
-import com.example.ecogreenpath_c23_pm02.ui.kuisioner.KuisionerActivity
+
 import com.example.ecogreenpath_c23_pm02.ui.login.LoginActivity
 
 

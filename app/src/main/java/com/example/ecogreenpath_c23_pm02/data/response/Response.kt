@@ -174,3 +174,8 @@ data class PointResponse(
     @field:SerializedName("message")
     val message: String
 )
+
+data class QuesionerResponse(
+    @SerializedName("responses")
+    val responses: List<String>
+)
