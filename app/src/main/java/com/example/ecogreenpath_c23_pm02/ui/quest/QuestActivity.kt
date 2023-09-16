@@ -52,6 +52,8 @@ class QuestActivity : AppCompatActivity() {
                     showLoading(false)
                     message(result.error)
                 }
+
+                else -> {}
             }
         }
     }

@@ -132,6 +132,8 @@ class QuestUploadActivity : AppCompatActivity() {
                     showLoading(false)
                     showMessage(result.error)
                 }
+
+                else -> {}
             }
         }
     }
